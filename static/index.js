@@ -24,7 +24,7 @@ $(function(){
    }
 
    function obtainLocalMedia(cb){
-      navigator.webkitGetUserMedia({audio: true}, function(localMediaStream){
+      navigator.webkitGetUserMedia({audio: true, video: true}, function(localMediaStream){
          var video = document.querySelectorAll('.localVideoContainer video')[0];
          video.src = window.URL.createObjectURL(localMediaStream);
          video.onloadedmetadata = function(){
