@@ -4,6 +4,9 @@
    background-color: #000;
    position: relative;
 }
+#remoteVideo {
+   height: 100%;
+}
 .localVideoContainer{
    width: 150px;
    height: 100px;
