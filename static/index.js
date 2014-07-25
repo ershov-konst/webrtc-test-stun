@@ -57,7 +57,7 @@ $(function(){
 
    function onIceConnectionStateChange() {
       console.log('oniceconnectionstatechange :: ', peerConnection.iceConnectionState);
-      if (peerConnection.iceConnectionState === 'connected') {
+      if (peerConnection.iceConnectionState === 'connected' || peerConnection.iceConnectionState === 'completed') {
          $('#closeConnection').show().on('click', function () {
             peerConnection.close();
          });
@@ -71,7 +71,12 @@ $(function(){
                'url': 'stun:turn.sbis.ru'
             },
             {
-               'url': 'turn:turn.sbis.ru',
+               'url': 'turn:91.213.144.172?transport=udp',
+               'username': 'myuser',
+               'credential': 'mypass'
+            },
+            {
+               'url': 'turn:91.213.144.172?transport=tcp',
                'username': 'myuser',
                'credential': 'mypass'
             }
