@@ -1,0 +1,17 @@
+{
+  "name": "webrtc-test-stun",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "socket.io" : "latest",
+    "express" : "latest",
+    "dot": "latest",
+    "node-uuid" : "latest"
+  },
+  "author": "",
+  "license": "ISC"
+}

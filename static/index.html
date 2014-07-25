@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="UTF-8">
+   <title></title>
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+   <script>
+      $.cookie('uuid', '{{=it.uuid}}');
+   </script>
+
+   <script src="/socket.io/socket.io.js"></script>
+   <script src="/static/index.js"></script>
+   <link rel="stylesheet" href="/static/index.css"/>
+</head>
+<body>
+
+   <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+         <div class="navbar-header">
+            <a class="navbar-brand" href="/">Accounting</a>
+         </div>
+
+         <div class="collapse navbar-collapse" id="top-navigation-toggle">
+            <ul class="nav navbar-nav">
+               <li class="active"><p class="navbar-text">uuid: {{=it.uuid}}</p></li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6">
+            <h4>Contact list</h4>
+            <table id="contacts" class="table table-hover table-striped">
+            </table>
+            <button style="display: none" id="closeConnection" class="btn btn-danger">Close Connection</button>
+         </div>
+         <div class="col-md-6">
+            <div class="remoteVideoContainer">
+               <video id="remoteVideo" autoplay></video>
+               <div class="localVideoContainer">
+                  <video height="100" width="150" src="" autoplay="autoplay" muted></video>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+</body>
+</html>
